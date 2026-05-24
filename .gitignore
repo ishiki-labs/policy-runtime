@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+dist/
+build/
+*.so
+
+# uv lockfile is checked in
+# but exclude editable installs:
+.python-version
