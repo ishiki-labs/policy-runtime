@@ -29,13 +29,22 @@ uv pip install -e .
 
 Deps: `torch`, `numpy`.
 
+The repo ships one test bundle under `bundles/scooping_v0/` (the
+`act_vae_scooping_halfchunk_qposdrop_v0` joint baseline, ~450 MB via Git
+LFS). After `git clone`, run `git lfs pull` to fetch it. To skip the
+bundle on clone (e.g. you're just consuming the library API):
+
+```bash
+GIT_LFS_SKIP_SMUDGE=1 git clone git@github.com:CloudChef-Inc/policy-runtime.git
+```
+
 ## Usage
 
 ```python
 import numpy as np
 from policy_runtime import Runtime
 
-rt = Runtime.load("my_bundle/", device="cuda")
+rt = Runtime.load("bundles/scooping_v0/", device="cuda")  # repo-bundled test fixture
 m = rt.manifest
 
 # You maintain raw-qpos and raw-image ring buffers yourself.

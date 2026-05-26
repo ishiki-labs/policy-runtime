@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "model_variant": "act_vae",
+  "exported_from": "act_vae_scooping_halfchunk_qposdrop_v0 @ step 100000",
+  "exported_at": "2026-05-25T06:57:34Z",
+  "robot_state_dim": 7,
+  "env_state_dim": 0,
+  "num_predictions": 50,
+  "num_qpos_tokens": 50,
+  "image_chw": [
+    3,
+    480,
+    848
+  ],
+  "base_camera_names": [
+    "overhead",
+    "wrist_right"
+  ],
+  "camera_history_length": 1,
+  "camera_history_stride": 50,
+  "qpos_history_length": 49,
+  "qpos_history_stride": 1,
+  "model_input_camera_names": [
+    "overhead_t-1",
+    "overhead",
+    "wrist_right_t-1",
+    "wrist_right"
+  ],
+  "action_space": "joint",
+  "device_hint": "cuda",
+  "_meta": {
+    "use_delta_actions": false,
+    "normalization_mode": "mean_std",
+    "task_name": "plating_live"
+  }
+}
