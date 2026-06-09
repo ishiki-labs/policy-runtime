@@ -1,5 +1,0 @@
-# Bundled .pt files live under bundles/ and are large (~hundreds of MB).
-# Track via Git LFS so the repo stays cheap to clone for callers who don't
-# need the test bundle (LFS files are fetched on demand, default-skipped
-# when GIT_LFS_SKIP_SMUDGE=1 or via `git lfs install --skip-smudge`).
-bundles/**/*.pt filter=lfs diff=lfs merge=lfs -text

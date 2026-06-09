@@ -12,3 +12,10 @@ build/
 # uv lockfile is checked in
 # but exclude editable installs:
 .python-version
+
+# model checkpoints / binary weights — distributed out-of-band, never committed
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+*.pth
